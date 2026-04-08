@@ -10,13 +10,22 @@ def contar_ciclo(n):
     """
     Retorna una lista con los números desde 1 hasta n usando iteración.
     """
-    # Escriba aquí su solución y borre la palabra pass de acontinuación
-    pass
+    resultado = []
+    for i in range(n, n+1):
+        resultado.append(i)
+    return resultado
 
 
 def contar_recursivo(n):
     """
     Retorna una lista con los números desde 1 hasta n usando recursividad.
     """
-    # Escriba aquí su solución y borre la palabra pass de acontinuación
-    pass
+    if n == 0:
+        return []
+    else:
+        lista_ant = recursivo(n - 1)
+        lista_ant.append(n)
+        return lista_ant
+
+print(contar_ciclo(6))
+print(contar_recursivo(6))
