@@ -27,5 +27,5 @@ def total_ventas_recursivo(ventas):
     else:
         return ventas[0] + total_ventas_recursivo(ventas[1:])
 
-print(total_ventas_ciclo([200, 650, 100, 25]))
-print(total_ventas_recursivo([200, 650, 100, 25]))
+print(total_ventas_ciclo([20000, 65000, 10000, 25000]))
+print(total_ventas_recursivo([20000, 65000, 10000, 25000]))
