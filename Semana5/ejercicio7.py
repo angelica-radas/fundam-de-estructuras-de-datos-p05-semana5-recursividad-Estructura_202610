@@ -14,11 +14,20 @@ def ahorro_total_ciclo(ahorros):
     """
     Retorna el ahorro total usando iteración.
     """
-    pass
+    total = 0
+    for monto in ahorros:
+        total += monto
+    return total
 
 
 def ahorro_total_recursivo(ahorros):
     """
     Retorna el ahorro total usando recursividad.
     """
-    pass
+    if len(ahorros) == 0:
+        return 0
+    else:
+        return ahorros[0] + ahorro_total_recursivo(ahorros[1:])
+
+print(ahorro_total_ciclo([20000, 80000, 250000]))    
+print(ahorro_total_recursivo([20000, 80000, 250000]))
